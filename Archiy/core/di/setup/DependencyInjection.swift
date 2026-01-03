@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - Property Wrapper
 
 /// Property wrapper for dependency injection
-/// Usage: @Inject var httpClient: HttpClientProtocol
+/// Usage: @Inject var someClass: SomeClass
 @propertyWrapper
 struct Inject<T> {
     private let container: DependencyContainer

@@ -7,9 +7,7 @@
 
 import Foundation
 
-/// Production HTTP client implementation using URLSession
-/// Uses Swift's built-in Result type for type-safe error handling
-final class HttpClient: HttpClientProtocol {
+final class KtorHttpClient: HttpClient {
     private let session: URLSession
     private let baseURL: String
     private let decoder: JSONDecoder

@@ -16,7 +16,7 @@ struct DependencyModule {
     }
     
     /// Register a singleton instance
-    /// Usage: single { HttpClient(...) }
+    /// Usage: single { SomeClass(...) }
     func single<T>(_ factory: @escaping () -> T) {
         let instance = factory()
         container.register(T.self, instance: instance)
@@ -42,7 +42,7 @@ struct DependencyModule {
     }
     
     /// Get a dependency
-    /// Usage: let httpClient: HttpClientProtocol = get()
+    /// Usage: let httpClient: HttpClient= get()
     func get<T>() -> T {
         do {
             return try container.resolveOrThrow(T.self)

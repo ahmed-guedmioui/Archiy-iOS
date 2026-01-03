@@ -7,15 +7,13 @@
 
 import Foundation
 
-/// Factory for creating configured HTTP clients
-/// Follows iOS best practices with protocol-oriented design
 enum HttpClientFactory {
     static func build(
         baseURL: String,
         timeoutInterval: TimeInterval = 30.0,
         additionalHeaders: [String: String]? = nil,
         authTokenProvider: (() -> String?)? = nil
-    ) -> HttpClientProtocol {
+    ) -> HttpClient {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = timeoutInterval
         configuration.timeoutIntervalForResource = timeoutInterval
@@ -30,7 +28,7 @@ enum HttpClientFactory {
         
         let session = URLSession(configuration: configuration)
         
-        return HttpClient(
+        return KtorHttpClient(
             session: session,
             baseURL: baseURL,
             decoder: decoder,
