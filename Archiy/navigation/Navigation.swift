@@ -43,8 +43,16 @@ struct Navigation: View {
     private func destinationView(for route: Route) -> some View {
         switch route {
         case .Login:
-            VStack{}
-                .navigationBarBackButtonHidden(true)
+            VStack{
+                CoreButton(
+                    text: "Login", onClick: {
+                        Alert.shared.show(
+                            title: "Login button clicked"
+                        )
+                    }
+                )
+            }
+            .navigationBarBackButtonHidden(true)
             
         case .Register:
             VStack{}

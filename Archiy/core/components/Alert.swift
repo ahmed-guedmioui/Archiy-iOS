@@ -16,7 +16,7 @@ class Alert: ObservableObject {
     @Published var message: String = ""
     @Published var isPresented: Bool = false
     
-    func show(buttonText: String = "Ok".local, title: String = "", message: String = "") {
+    func show(buttonText: String = "OK".local, title: String = "", message: String = "") {
         self.buttonText = buttonText
         self.title = title
         self.message = message
