@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct ArchiyApp: App {
+    
+    init() {
+        startDI()
+    }
+    
     var body: some Scene {
         WindowGroup {
             Navigation()
+                .injectDependencies()
         }
     }
 }
