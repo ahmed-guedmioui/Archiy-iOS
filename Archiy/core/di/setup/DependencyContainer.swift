@@ -98,7 +98,7 @@ final class DependencyContainer {
     func resolveOptional<T>(_ type: T.Type) -> T? {
         try? resolveOrThrow(type)
     }
-    
+
     // MARK: - Cleanup
     
     /// Remove a registered dependency
