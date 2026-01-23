@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class KtorHttpClient: HttpClient {
+final class KtorHttpClient: HttpClientProtocol {
     private let session: URLSession
     private let baseURL: String
     private let decoder: JSONDecoder

@@ -10,13 +10,14 @@ protocol ExampleRepository {
 }
 
 final class ExampleRepositoryImpl: ExampleRepository {
-    private let httpClient: HttpClient
+    private let httpClient: HttpClientProtocol
     
-    init(httpClient: HttpClient) {
+    init(httpClient: HttpClientProtocol) {
         self.httpClient = httpClient
     }
     
     func fetchData() async -> Result<String, DataError.Remote> {
+        print("fetchData")
         return await httpClient.get(route: "/api/data", headers: nil)
     }
 }

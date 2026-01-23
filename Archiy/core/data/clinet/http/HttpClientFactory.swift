@@ -11,9 +11,8 @@ enum HttpClientFactory {
     static func build(
         baseURL: String,
         timeoutInterval: TimeInterval = 30.0,
-        additionalHeaders: [String: String]? = nil,
-        authTokenProvider: (() -> String?)? = nil
-    ) -> HttpClient {
+        additionalHeaders: [String: String]? = nil
+    ) -> HttpClientProtocol {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = timeoutInterval
         configuration.timeoutIntervalForResource = timeoutInterval
@@ -33,7 +32,7 @@ enum HttpClientFactory {
             baseURL: baseURL,
             decoder: decoder,
             encoder: encoder,
-            authTokenProvider: authTokenProvider
+            authTokenProvider: {return ""}
         )
     }
 }

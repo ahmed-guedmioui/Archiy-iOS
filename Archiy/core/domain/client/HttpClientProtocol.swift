@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HttpClient {
+protocol HttpClientProtocol {
     func get<Response: Decodable>(
         route: String,
         headers: [String: String]?
