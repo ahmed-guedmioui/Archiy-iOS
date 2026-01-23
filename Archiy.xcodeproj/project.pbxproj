@@ -11,14 +11,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3F7A14A22F23E87E0026CE36 /* resources */ = {
+		3FA3DE052F0864F200B9982E /* archiy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = resources;
-			sourceTree = "<group>";
-		};
-		3FA3DE052F0864F200B9982E /* Archiy */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Archiy;
+			path = archiy;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -37,8 +32,7 @@
 		3FA3DDFA2F0864F200B9982E = {
 			isa = PBXGroup;
 			children = (
-				3F7A14A22F23E87E0026CE36 /* resources */,
-				3FA3DE052F0864F200B9982E /* Archiy */,
+				3FA3DE052F0864F200B9982E /* archiy */,
 				3FA3DE042F0864F200B9982E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,8 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3F7A14A22F23E87E0026CE36 /* resources */,
-				3FA3DE052F0864F200B9982E /* Archiy */,
+				3FA3DE052F0864F200B9982E /* archiy */,
 			);
 			name = Archiy;
 			packageProductDependencies = (
